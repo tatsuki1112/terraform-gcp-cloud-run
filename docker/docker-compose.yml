@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  php:
+    build:
+      context: .
+    volumes:
+      - "./src:/app/src"
+    ports:
+      - published: 8080
+        target: 80
+        protocol: tcp
+    environment:
+      PORT: 80
